@@ -454,7 +454,7 @@ public class Gui {
             	String month = date.getDisplayName(Calendar.MONTH, Calendar.LONG, Locale.getDefault()); // long is a get display name, and locale gets the local time and default is the pc time
         		date.add(Calendar.DAY_OF_MONTH, getdate());
         		
-        		if (date.get(Calendar.DAY_OF_MONTH) < 31) {
+        		if (date.get(Calendar.DAY_OF_MONTH) > 31) {
         			date.add(Calendar.MONTH, 1);
         			month =  date.getDisplayName(Calendar.MONTH, Calendar.LONG, Locale.getDefault());
         		}
