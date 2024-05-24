@@ -7,17 +7,18 @@ public class logic {
 	private Gui gui;
 	private Bookandusers data;
 	public boolean found;
-	
-	
+	public static int i;
+	private String[] userId;
+	private String[] passW;
+
 	public void enterbtn(String user, String password) {	
-		gui = new Gui();
 		data = new Bookandusers();
-		String[] userId = data.id;
-		String[] passW = data.password;
+		userId = data.id;
+		passW = data.password;
 		
 		found = false;
 		
-		for (int i = 0; i < userId.length; i++) 	{	
+		for ( i = 0; i < userId.length; i++) 	{	
 			if (user.equals(userId[i]) && password.equals(passW[i])) // Checks each index if it is equal to the same index of password 
 				{
 				this.found = true;
@@ -32,7 +33,10 @@ public class logic {
 		
 	}
 	
+	// admin button 
+	
 	public boolean isFound() {
+
 		return found;
 	}
 	
